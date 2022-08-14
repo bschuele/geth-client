@@ -2,6 +2,8 @@ FROM ethereum/client-go
 
 ARG ACCOUNT_PASSWORD
 
+RUN apk add --no-cache bash
+
 COPY genesis.json /tmp
 
 RUN geth init /tmp/genesis.json \
